@@ -61,6 +61,12 @@ route::get('/guru', [GuruController::class, 'index'])->name('guru');
 route::get('/guru/detail/{id_guru}', [GuruController::class, 'detail']);
 // latihan 11
 route::get('/guru/add', [GuruController::class, 'add']);
+// latihan 12 add
 route::post('/guru/insert', [GuruController::class, 'insert']);
+// latihan 13 edit
+route::get('/guru/edit/{id_guru}', [GuruController::class, 'edit']);
+route::post('/guru/update/{id_guru}', [GuruController::class, 'update']);
+// delete
+route::get('/guru/delete/{id_guru}', [GuruController::class, 'delete']);
 
 route::get('/about/{id}', [HomeController::class, 'about']);

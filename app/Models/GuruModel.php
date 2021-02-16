@@ -30,13 +30,15 @@ class GuruModel extends Model
 
     // latihan 9
 
-    public function allData(){
+    public function allData()
+    {
         return DB::table('tbl_guru')->get();
     }
 
     // latihan 10
     // detail
-    public function detailData($id_guru){
+    public function detailData($id_guru)
+    {
         return DB::table('tbl_guru')->where('id_guru', $id_guru)->first();
     }
 
@@ -45,5 +47,19 @@ class GuruModel extends Model
     public function addData($data)
     {
         DB::table('tbl_guru')->insert($data);
+    }
+
+    // latihan 13
+    // update
+    public function editData($id_guru, $data)
+    {
+        DB::table('tbl_guru')->where('id_guru', $id_guru)->update($data);
+    }
+
+    // latihan 14
+    // delete
+    public function deleteData($id_guru)
+    {
+        DB::table('tbl_guru')->where('id_guru', $id_guru)->delete();
     }
 }
