@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GuruController;
+use App\Http\Controllers\SiswaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -68,5 +69,10 @@ route::get('/guru/edit/{id_guru}', [GuruController::class, 'edit']);
 route::post('/guru/update/{id_guru}', [GuruController::class, 'update']);
 // delete
 route::get('/guru/delete/{id_guru}', [GuruController::class, 'delete']);
+
+// latihan 15 siswa controller
+route::get('/siswa', [SiswaController::class, 'index']);
+
+
 
 route::get('/about/{id}', [HomeController::class, 'about']);

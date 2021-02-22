@@ -4,6 +4,27 @@
 @section('content')
 <div class="container">
     <h1>Siswa</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quibusdam non ad ipsum rerum odit earum vitae, consequatur excepturi! Earum!</p>
+    <table class="table">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>NIS</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($siswa as $data)
+            <tr>
+                <td>{{$data->id_siswa}}</td>
+                <td>{{$data->nis_siswa}}</td>
+                <td>{{$data->nama_siswa}}</td>
+                <td>{{$data->nama_kelas}}</td>
+                <td>{{$data->nama_mapel}}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 @endsection
